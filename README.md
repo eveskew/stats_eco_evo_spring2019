@@ -4,7 +4,7 @@ This is the course repository for EEEB UN3005/GR5005 taught at Columbia Universi
 
 ### Course Syllabus
 
-See the most current pdf version of the syllabus [here](https://github.com/eveskew/stats_eco_evo_spring2019/syllabus/syllabus.pdf).
+See the most current pdf version of the syllabus [here](https://github.com/eveskew/stats_eco_evo_spring2019/blob/master/syllabus/syllabus.pdf).
 
 ### Installing `rethinking`
 
