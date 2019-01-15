@@ -10,7 +10,6 @@ urlcolor: blue
 
 library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
-path <- here::here(".", "new_syllabus.pdf")
 ```
 
 \begin{center}
@@ -24,13 +23,13 @@ path <- here::here(".", "new_syllabus.pdf")
 
 ##  Instructor
 
-Evan Eskew (eae2144@columbia.edu)
+Evan Eskew (eae2144@columbia.edu); office hours after class or by appointment
 
 ## Teaching Assistants
 
-Krishna Anujan (ka2602@columbia.edu)
+Krishna Anujan (ka2602@columbia.edu); office hours by appointment
 
-Alexandra Huddell (amh2284@columbia.edu)
+Alexandra Huddell (amh2284@columbia.edu); office hours by appointment
 
 
 # Course Description
@@ -44,12 +43,12 @@ At the conclusion of this course, you should be much more comfortable working wi
 
 The primary text for this course is [*Statistical Rethinking: A Bayesian Course with Examples in R and Stan*](https://xcelab.net/rm/statistical-rethinking/) by Richard McElreath. This is an incredibly accessible statistics book, and it will serve us well in establishing the foundations of regression modeling. It is worth checking online retailers for the book since used copies can sometimes be found at a discount. The book contains extensive R code, so it will also assist us in strengthening our R skills throughout the semester. **I highly encourage you to work step-by-step through the book material in R as you complete your readings.** In coding, as in most things, practice makes perfect. 
 
-In addition to chapters from *Statistical Rethinking*, there will be some additional assigned readings from the scientific literature and blogs. I will post all of these materials on the class CourseWorks site or else they are freely available online and linked in the syllabus.
+In addition to chapters from *Statistical Rethinking*, there will be some additional assigned readings from the scientific literature and blogs. I will post these materials on the class CourseWorks site, or they are freely available online and linked in the syllabus.
 
 
 # Course Organization
 
-The course topic for each week will be introduced through that week's readings. Therefore, it is imperative that you do the required reading for this class *before* the relevant lecture. **If you do not complete the readings, you will be lost!** Lectures will closely follow readings and should help solidify your understanding of the material. In lab sections, you will address problems in statistical coding in an environment where help is readily available from myself and the course TAs. Finally, homework assignments are your opportunity to demonstrate mastery of the material through independent work. Homework assignments will be released on Wednesday of each week and will be due the following Tuesday at 5 pm.
+The course topic for each week will be introduced through that week's readings. Therefore, it is imperative that you do the required reading *before* the relevant lecture. **If you do not complete the readings, you will be lost!** Lectures will closely follow readings and should help solidify your understanding of the material. In lab sections, you will address problems in statistical coding in an environment where help is readily available from myself and the course TAs. Finally, homework assignments are your opportunity to demonstrate mastery of the material through independent work. Homework assignments will be released on Wednesday of each week and will be due the following Tuesday at 5 pm.
 
 Those enrolled in the graduate course will also complete an additional research project assignment throughout the semester. Project details will be provided separately.
 
@@ -63,7 +62,7 @@ While not required, having a personal computer for this class will be a signific
 
 # Course GitHub
 
-In addition to using the typical CourseWorks site, I will also maintain a [GitHub repository for this course](https://github.com/eveskew/stats_eco_evo_spring2019). This will allow others to freely access materials and also provides an opportunity for you to become familiar with git and GitHub, if you're so inclined. 
+In addition to using the CourseWorks site, I will maintain a [GitHub repository for this course](https://github.com/eveskew/stats_eco_evo_spring2019). This will allow others to freely access materials and also provides an opportunity for you to become familiar with git and GitHub, if you're so inclined. 
 
 
 \newpage
@@ -114,7 +113,7 @@ kable(table, align = "c")
 
 ## Grading Policies
 
-In this course, **late assignments will receive no credit.** However, before final grades are calculated, **I will drop your lowest homework grade.** This is intended to provide all students with protection against any circumstances that might affect the timeliness or quality of your work. Your lab grade will be determined by your weekly attendance and engagement with the material. Similar to my homework grading policy, **I will grant all students one lab absence for the semester without penalty.**
+In this course, **late assignments will receive no credit.** However, before final grades are calculated, **I will drop your lowest homework grade.** This is intended to provide all students with protection against any circumstances that might affect the timeliness or quality of classwork. Your lab grade will be determined by your weekly attendance and engagement with the material. Similar to my homework grading policy, **I will grant all students one lab absence for the semester without penalty.**
 
 If a serious medical, family, or other emergency may prevent you from completing an assignment on time, please talk with me as soon as possible about the circumstances, and we will discuss plans for helping you to complete your work. I will grant assignment extensions only in cases of extreme emergency, which are determined at my discretion.
 
@@ -152,6 +151,8 @@ For homework assignments, I encourage you to discuss the problem sets and potent
 
 **Required reading:**  
 
+- McElreath, R. 2017. "There is always prior information." [Article link](http://elevanth.org/blog/2017/08/22/there-is-always-prior-information/)
+
 - *Statistical Rethinking*: Chapter 2 
 
 **Optional reading:**
@@ -172,9 +173,7 @@ For homework assignments, I encourage you to discuss the problem sets and potent
 
 - *Statistical Rethinking*: Chapter 4  
 
-**Optional reading:**
-
-- McElreath, R. 2017. "There is always prior information." [Article link](http://elevanth.org/blog/2017/08/22/there-is-always-prior-information/)
+**EEEB GR5005 Students: Research project prospectus due Mar 07**
 
 ## Week 07 (Mar 11) - Multiple Regression
 
@@ -216,6 +215,8 @@ For homework assignments, I encourage you to discuss the problem sets and potent
 
 - *Statistical Rethinking*: Chapter 8  
 
+**EEEB GR5005 Students: Latest research project rough drafts accepted Apr 11**
+
 ## Week 12 (Apr 15) - Binomial Regression
 
 ## Week 13 (Apr 22) - Introduction to Multilevel Modeling
@@ -231,6 +232,8 @@ For homework assignments, I encourage you to discuss the problem sets and potent
 **Required reading:**  
 
 - Bolker, B. M., et al. 2009. Generalized linear mixed models: a practical guide for ecology and evolution. 
+
+**EEEB GR5005 Students: Research projects due May 02**
 
 ## Week 15 (May 06) - The Wide World of Statistical Models
 

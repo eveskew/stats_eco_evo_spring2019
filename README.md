@@ -12,14 +12,14 @@ Our course text will be [*Statistical Rethinking*](https://xcelab.net/rm/statist
 
 ### Repository Organization
 
-- `data/` contains data files used in lectures, labs, or homeworks.
-- `gr5005_research_project/` contains an assignment description for the graduate level research project.
-- `homework/` contains homework assignments as R Markdown files.
-- `images/` contains image files used internally by the course repository.
-- `lab/` contains laboratory assignments as R Markdown files.
-- `lecture/` contains lecture materials in various file formats.
-- `readings/` contains supplemental course readings (i.e., those not from *Statistical Rethinking*).
-- `syllabus/` contains the current course syllabus and the associated R Markdown source file.
+- [:file_folder: data](/data): data files used in lectures, labs, or homeworks.
+- [:file_folder: gr5005_research_project](/gr5005_research_project): an assignment description for the graduate level research project.
+- [:file_folder: homework](/homework): homework assignments as R Markdown files.
+- [:file_folder: images](/images): image files used internally by the course repository.
+- [:file_folder: lab](/lab): laboratory assignments as R Markdown files.
+- [:file_folder: lecture](/lecture): lecture materials in various file formats.
+- [:file_folder: readings](/readings): supplemental course readings (i.e., those not from *Statistical Rethinking*).
+- [:file_folder: syllabus](/syllabus): the current course syllabus and the associated R Markdown source file.
 
 ### Attribution of Course Material
 
