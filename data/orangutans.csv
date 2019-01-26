@@ -1,0 +1,16 @@
+"individual","location","weight_kg","sex","tool_use"
+"A","Borneo",105,"male",TRUE
+"B","Borneo",72,"male",FALSE
+"C","Borneo",60,"male",FALSE
+"D","Borneo",43,"female",TRUE
+"E","Borneo",41,"female",TRUE
+"F","Borneo",38,"female",TRUE
+"G","Borneo",33,"female",FALSE
+"H","Sumatra",110,"male",FALSE
+"I","Sumatra",81,"male",FALSE
+"J","Sumatra",77,"male",TRUE
+"K","Sumatra",42,"female",TRUE
+"L","Sumatra",38,"female",TRUE
+"M","Sumatra",37,"female",FALSE
+"N","Sumatra",32,"female",TRUE
+"O","Sumatra",30,"female",FALSE
