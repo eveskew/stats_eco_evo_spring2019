@@ -1,0 +1,106 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 01 - 28 and 30 January 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction to R and RStudio
+
+All lab and homework assignments in this course will be distributed as R Markdown files. You can think of R Markdown files as text documents that can also feature portions of R code in specially designated areas called "chunks." R Markdown documents can be "knit" into other document types. During the knitting process, the R code within the R Markdown document is executed and both text and code output is woven together (knitted) to make a final document, such as a pdf file. This is incredibly useful for our course purposes since you will be able to write both R code and text in response to assignment prompts and generate a nicely formatted pdf file as your final product for submission.
+
+This lab is meant to reinforce some basic concepts in R and demonstrate how you use R Markdown documents.
+
+
+## Exercise 1: Code Chunks and Simple Calculations
+
+A primary difference between R Markdown files and regular R scripts is that in R Markdown files, the R code itself is confined to what are known as code chunks. Code chunks are created by entering three back ticks, followed by an "r" in braces, and another three back ticks. Within this code chunk, you can write normal R code. Within a code chunk, you can run code line by line, as you would with any R script, or you can run the entire chunk of code with the "Run Current Chunk" button at the right of the chunk (green "play button").
+
+To get familiar, first, add the numbers 3 and 4 using R code in the chunk below. Next, put a new line in the chunk that multiplies the numbers 5 and 6. Make sure you can get output running the code line by line and as an entire chunk. 
+
+```{r}
+
+```
+
+Create a vector named `x` that contains the numbers 1, 5, and 9. Remember that you can create vectors using the `c()` function. Note that if you simply assign a vector to `x`, there will be no immediate output. In order to see the values contained within `x`, you'll have to type `x` on a separate line of the chunk. Make sure you do that as well. 
+
+```{r}
+
+```
+
+Now, assign `x` the values of 1 through 10 using the colon operator (`:`) which will create an integer series between a starting and ending value. Type `x` again to confirm that the vector `x` has taken on a new set of values.
+
+```{r}
+
+```
+
+Using an R operation, return the squared values of every element in `x`.
+
+```{r}
+
+```
+
+Generate a variable `y` that is equal to the sum of all elements in `x`. Show the value of `y`.
+
+```{r}
+
+```
+
+Make a vector called `panda_name` with two text elements. The first element should read "Ailuropoda". The second element should read "melanoleuca".
+
+```{r}
+
+```
+
+Use bracket subsetting (`[ ]`) to return the second element of `panda_name`.
+
+```{r}
+
+```
+
+
+## Exercise 2: Working Directories
+
+In R scripts or R Markdown files, the working directory describes where on your computer R is "looking" to find and save files. Consequently, R will usually be trying to retrieve files from and save files into your working directory unless you specify other file locations within function calls. 
+
+To get your current working directory location, use the function `getwd()`.
+
+```{r}
+
+```
+
+Your working directory should be identical to the location of this R Markdown file on your computer. Therefore, R will assume all files you reference within the script are located in your working directory unless you specifically state otherwise through the use of appropriate filepaths.
+
+With a typical R script, we can change the working directory with the function `setwd()` (short for "set working directory"). Alternatively, you can set your working directory within RStudio by clicking "Session" and selecting "Set Working Directory" in the menu. Unfortunately, modifying working directories is a bit more complicated with R Markdown files. For our purposes, it will be easiest to situate data and other files you may want to reference in your R Markdown script in a consistent location rather than altering your working directory. 
+
+That said, before moving onto the next exercise, create a new folder within your current working directory called `data` (unless you already have one). Note you can do this from your operating system itself (i.e., "Finder" on Mac operating systems) or via the file browser in RStudio.
+
+**Quick tangent**: For your own ease of organization, it probably makes sense going forward to have something like a "Statistics for Ecology and Evolution" folder on the computer you plan to use for all class-related work. Within this folder, you could have, among others, `homework`, `lab`, and `data` folders to hold the relevant files. This will make your scripting more consistent throughout the semester since you'll be using similar filepaths the whole time. If you're a bit confused about all this, don't worry. The concept of directory structure and filepaths should make more sense following the next exercise.
+
+
+## Exercise 3: Importing Data
+
+Often, we'll want to import external data into R. There are a number of functions that can be used for this purpose, but for files containing comma separated values (CSVs), `read.csv()` is an easy option. If you're unfamiliar with CSV files, they're a file type that serve similar purposes as XLS or XLSX files (and they can also be opened with Microsoft Excel), but they're also much simpler than Excel files. The primary argument needed for the `read.csv()` function is the filepath to the relevant file, input as a character string. For example, `read.csv("path/to/my_file.csv")` would read in a file called `my_file.csv` located in this particular filepath (but not assign it to an object). 
+
+The file `ebay_snake_captures.csv` can be found on CourseWorks or on the course [GitHub repository](https://github.com/eveskew/stats_eco_evo_spring2019). Download this file, move it into the folder called `data` that is in your working directory, and import it into R, using the `read.csv()` function. Note you'll probably need to move `ebay_snake_captures.csv` into your `data` folder depending on where the file downloads to your computer by default.
+
+Once you import the data, can you report the column names of the resulting data frame? What functions might be used to inspect the data?
+
+```{r}
+
+```
+
+
+## Exercise 4: Knit To PDF
+
+Now, we'd like to output the work we've done into a pdf file. Thankfully, all you need to do is click the "Knit" button in RStudio. Before you do so, make sure to change the `author` field at the top of this document to your name.
+
+RStudio should pop up a preview of the resulting pdf file, but a copy will also be saved to your computer. Can you find it? Where was the file saved? What was it named?
+
+The R code `knitr::opts_chunk$set(echo = TRUE)` appears in the first code chunk of this document. Do you see it in your resulting pdf output? Can you figure out why or why not?
