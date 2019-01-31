@@ -1,0 +1,79 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 01 - Due 05 Feb 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_01_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.
+
+
+## Problem 1 (3 points)
+
+Perform the following calculations using R code:
+
+a) 430 divided by 6
+
+```{r}
+
+```
+
+b) 12 cubed
+
+```{r}
+
+```
+
+c) Assign `x` the sum of 26.7, 13.1, and 4. Show the resulting value of `x`.
+
+```{r}
+
+```
+
+
+## Problem 2 (3 points)
+
+a) Assign `my.nums` the values -6, -3, 0, 3, 6, and 9 using the `c()` function. Show the resulting values of `my.nums`.
+
+```{r}
+
+```
+
+b) Assign `my.nums2` the values -6, -3, 0, 3, 6, and 9 using the `seq()` function. Show the resulting values of `my.nums2`.
+
+```{r}
+
+```
+
+
+## Problem 3 (4 points)
+
+a) Assign `my.favs` the names of five of your favorite organisms (the scientific names). Show the resulting values of `my.favs`.
+
+```{r}
+
+```
+
+b) Use bracket indexing (the `[ ]` functionality) to display only the first element in your `my.favs` vector.
+
+```{r}
+
+```
+
+c) Use bracket indexing and the `:` operator to display the third *through* fifth elements in your `my.favs` vector.
+
+```{r}
+
+```
+
+d) Run the line of code `rep(my.favs, each = 4)`. Describe what this function is doing.
+
+```{r}
+
+```
