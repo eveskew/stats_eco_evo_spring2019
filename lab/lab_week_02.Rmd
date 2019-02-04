@@ -1,0 +1,133 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 02 - 04 and 06 February 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+```
+
+
+# Data Cleaning
+
+To practice data cleaning, in this week's lab, we'll be using [published data](https://www.nature.com/articles/sdata201817) on RNA viruses collated by Mark Woolhouse and Liam Brierley. This dataset contains trait information gathered from the scientific literature on 214 RNA viruses that are known to infect humans. See the ["Data Records"](https://www.nature.com/articles/sdata201817#data-records) section of the published paper for information on the variables included in the dataset. I've downloaded the data and converted it to a CSV file for your ease of use. Find the data on either the class CourseWorks page or the class GitHub repository as `Woolhouse_and_Brierley_RNA_virus_database.csv`. 
+
+
+## Exercise 1: Data Import
+
+Download the Woolhouse and Brierley data, and import it into R, assigning it to an object named `viruses`. Run `summary()` on this object. You'll get a load of information in return, but this is just to familiarize yourself broadly with the dataset.
+
+```{r}
+
+```
+
+
+## Exercise 2: Code Translation
+
+For this series of exercises, you'll be given a chunk of code that does some data manipulation in base R. Your goal is to describe what this code is doing (in text below the code) and then translate that data manipulation operation using `dplyr` functions (in the empty code chunks). The `dplyr` solution will hopefully be simpler and more intuitive to you (which is why I'm encouraging you to learn `dplyr`). However, as an R user, you'll also be seeing lots of code written with base R functions, so best to be able to understand the basics of data manipulation with these built-in functions as well.
+
+a) 
+  
+- Base R code:
+
+```{r}
+
+viruses[viruses$Family == "Coronaviridae", ]
+```
+
+- `dplyr` equivalent: 
+
+```{r}
+
+```
+
+b)
+
+- Base R code:
+
+```{r}
+
+viruses[1:10, c(1, 2, 3, 7)]
+```
+
+> Hint: Look at the `dplyr` function called `slice()` using `?slice()`.
+
+- `dplyr` equivalent:
+
+```{r}
+
+```
+
+c)
+
+- Base R code:
+
+```{r}
+
+sort(viruses$Species[viruses$Envelope == 0])
+```
+
+- `dplyr` equivalent:
+
+```{r}
+
+```
+
+
+## Exercise 3: Code Annotation
+
+In the following series of exercises, you will be provided with functioning R code of `dplyr` data manipulation pipelines. Your goal is to comment these code blocks line-by-line, describing what each function is doing to create the final output. Please note, if you're not sure how a given line is functioning within the whole code block, this type of code is easily run in successively larger chunks. In other words, start by running the first line, then the first two lines, then the first three lines, etc. in order to see how the output changes. Additionally, reviewing function help files (e.g., `?some_function()`) may shed light on what's happening.
+
+a)
+
+```{r}
+
+viruses %>%
+  mutate(Envelope_mod = ifelse(Envelope == 1, "enveloped", "not enveloped")) %>%
+  filter(Discovery.year >= 1990) %>%
+  filter(Transmission.level %in% c("3", "4a", "4b")) %>%
+  select(Family, Species, Envelope_mod) %>%
+  arrange(Family, Species)
+```
+
+b)
+
+```{r}
+
+viruses %>%
+  filter(Discovery.year >= 1990) %>%
+  filter(Transmission.level %in% c("3", "4a", "4b")) %>%
+  group_by(Family) %>%
+  summarize(
+    n = n(),
+    n_enveloped = sum(Envelope),
+    proportion_enveloped = (n_enveloped/n)*100
+  ) %>%
+  arrange(desc(n))
+```
+
+> What do you notice about the `proportion_enveloped` column?
+
+c)
+
+```{r}
+
+viruses %>%
+  group_by(Family) %>%
+  summarize(n_envelope_types = n_distinct(Envelope)) %>%
+  arrange(desc(n_envelope_types))
+```
+
+> What do you learn from this data summary about the number of distinct envelope types per viral family?
+
+
+## Bonus Exercise: Install `rethinking`
+
+If you have not yet installed the `rethinking` package, now would be a good time to try to do so, using the instructions at https://github.com/rmcelreath/rethinking.
