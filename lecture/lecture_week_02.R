@@ -272,22 +272,22 @@ d %>%
 
 d %>%
   group_by(species) %>%
-  summarize(total_captures = n()) %>%
-  # arrange the data frame by "total_captures"
-  arrange(desc(total_captures)) %>%
+  summarize(total_observations = n()) %>%
+  # arrange the data frame by "total_observations"
+  arrange(desc(total_observations)) %>%
   View()
 
 d %>%
   # group_by(species) %>%
-  summarize(total_captures = n()) %>%
-  arrange(desc(total_captures)) %>%
+  summarize(total_observations = n()) %>%
+  arrange(desc(total_observations)) %>%
   View()
 # with no grouping, the entire data frame is considered 
 # a group
 
 d %>%
   group_by(species, trap_type) %>%
-  summarize(total_captures = n()) %>%
+  summarize(total_observations = n()) %>%
   arrange(species, trap_type) %>%
   View()
 
