@@ -1,0 +1,61 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 02 - Due 12 Feb 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_02_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.
+
+
+## Problem 1 (1 point)
+
+On the class CourseWorks and GitHub site you will find a dataset called `orangutans.csv`. This file contains hypothetical data on weight, sex, and observed tool use for orangutans from Sumatra and Borneo. Import this data into R, assigning the data to an object called `orangutans`. Use a summary function of your choice to get an idea of the data structure you're working with. Which variable(s) in the data represent numeric data?
+
+```{r}
+
+```
+
+
+## Problem 2 (2 points)
+
+Using `dplyr`, return the row of data for individual J. Perform the same operation using bracket subsetting (i.e., the base R solution).
+
+```{r}
+
+```
+
+
+## Problem 3 (2 points)
+
+Using `dplyr`, return all rows of data that correspond to orangutans sampled from Sumatra that are greater than 40 kg in weight. 
+
+```{r}
+
+```
+
+
+## Problem 4 (2 points)
+
+Using `dplyr`, sort the `orangutans` data frame according to weight, from high to low, and return only the `individual` and `weight_kg` variables.
+
+```{r}
+
+```
+
+
+## Problem 5 (3 points)
+
+Using `dplyr`, calculate the mean weight for orangutans of each sex in each in location. In other words, you should be returning one mean weight value for each of the following groups: females from Borneo, females from Sumatra, males from Borneo, and males from Sumatra.
+
+```{r}
+
+```
