@@ -47,7 +47,7 @@ Create a modified date column in `e` called `date_mod` using the following code:
 
 Given that the `e` data contains information on snake captures throughout the year, one might naturally be interested in how snake captures vary over time. One sensible way to do this would be to summarize how many of each snake species were captured in a given month. However, right now, our `date_mod` variable represents an even finer scale of date data (i.e., specific days rather than just months).
 
-To get data appropriate for downstream use, first, create a new variable in your `e` data frame called `month_of_capture` that indicates the month associated with a given `date_mod` value using the following code: `(format(e$date_mod, "%m"))`. Note, if you plan to work extensively with dates in R, the `lubridate` package has a number of convenient functions for this purpose. The `lubridate` function `month()` would allow us to do this same operation, for example.
+To get data appropriate for downstream use, first, create a new variable in your `e` data frame called `month_of_capture` that indicates the month associated with a given `date_mod` value using the following code: `as.numeric(format(e$date_mod, "%m"))`. Note, if you plan to work extensively with dates in R, the `lubridate` package has a number of convenient functions for this purpose. The `lubridate` function `month()` would allow us to do this same operation, for example.
 
 Next, create a data frame called `e2` that represents each unique month-snake species combination found within `e` and the associated total capture count (call this variable `monthly_capture_count`). 
 
