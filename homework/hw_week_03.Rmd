@@ -1,0 +1,79 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 03 - Due 19 Feb 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+library(ggplot2)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_03_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.
+
+
+## Problem 1 (5 points)
+
+Find on the class CourseWorks or GitHub site a dataset called `mammals.csv` that contains data on body (kg) and brain (g) masses across 62 mammal species.
+
+a) Import the `mammals.csv` dataset into R, and assign it to an object called `mammals`. Run the `head()` function on `mammals` to get a glimpse of the raw data.
+
+```{r}
+
+```
+
+b) Use `plot()` (the base R plotting function) to create a scatter plot of the `mammals` data, with body mass on the x-axis and brain mass on the y-axis. Do you notice anything unusual about the resulting plot? Why might this be the case?
+
+```{r}
+
+```
+
+c) Now, create a plot analogous to Problem 1b but rather than plotting the raw body and brain mass values, use the `log10()` function to plot log-transformed body and brain mass values. In this plot, have the x-axis label read "Log10(Body Mass (kg))", have the y-axis label read "Log10(Brain Mass (g))", and have the main title read "Brain-Body Mass Relationship Across 62 Mammals". 
+
+> Hint: There are multiple ways to approach this problem. You may want to create new variables in your `mammals` data frame that are log-transformed versions of the raw variables or you can insert the `log10()` function calls directly within your `plot()` call to do the transformation there. It's up to you!
+
+```{r}
+
+```
+
+d) Replicate the plot in Problem 1c as completely as possible using `ggplot()`. Include the log transformation of both the body and brain values. Modify the x-axis, y-axis, and main title labels as previously described.
+
+```{r}
+
+```
+
+
+## Problem 2 (5 points)
+
+Find on the class CourseWorks or GitHub site a demographic dataset called `gapminder.csv`. While this is not *technically* ecological data, one could reasonably argue that human population size and resulting resource demands are critical drivers of ecological and evolutionary processes. Plus, this is just a good dataset to work with when learning plotting.
+
+a) Import the `gapminder` dataset into R. Within the data, the `continent` variable has 5 different potential values, one of which is "Americas". Create a dataset called `g.americas` that only contains `gapminder` data from the Americas. Use `summary()` to examine your `g.americas` dataset and verify you only have data from the Americas.
+
+```{r}
+
+```
+
+b) Using `ggplot()` and `geom_line()`, make a line plot with year along the x-axis and population size (the `pop` variable) along the y-axis. Within your `aes()` call, you'll need to specify that `group = country` so that the lines appearing in your plot represent population data over time from one country (the plot won't make much sense otherwise).
+
+```{r}
+
+```
+
+c) Modify the plot you created above to show the lines for each country in different colors. `ggplot()` should automatically produce a legend for you.
+
+```{r}
+
+```
+
+d) Modify the plot from Problem 2c to facet the plot by country. You'll probably want to add the layer `theme(legend.position = "none")` to your plot in order to get rid of all legends. Otherwise, the legend will take up a lot of your plotting space.
+
+```{r}
+
+```
+
+e) The plot you produced in Problem 2d is often called a [small multiple](https://en.wikipedia.org/wiki/Small_multiple) plot. Which do you prefer, the plot from Problem 2c or 2d? What do you think are the benefits and drawbacks of each plot's aesthetics?
