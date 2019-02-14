@@ -58,7 +58,7 @@ a) Import the `gapminder` dataset into R. Within the data, the `continent` varia
 
 ```
 
-b) Using `ggplot()` and `geom_line()`, make a line plot with year along the x-axis and population size (the `pop` variable) along the y-axis. Within your `aes()` call, you'll need to specify that `group = country` so that the lines appearing in your plot represent population data over time from one country (the plot won't make much sense otherwise).
+b) Using `ggplot()` and `geom_line()`, make a line plot of your `g.americas` data with year along the x-axis and population size (the `pop` variable) along the y-axis. Within your `aes()` call, you'll need to specify that `group = country` so that the lines appearing in your plot represent population data over time from one country (the plot won't make much sense otherwise).
 
 ```{r}
 
