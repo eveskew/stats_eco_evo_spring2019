@@ -1,0 +1,38 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 04 - 18 and 20 February 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Bayesian Basics
+
+
+## Exercise 1: Applying Bayes' Theorem using Grid Approximation
+
+Imagine the series of observations in the globe tossing example from the *Statistical Rethinking* text and class were: W L W W, where "W" corresponds to water and "L" corresponds to land.
+
+With this set of observations, use grid approximation (with 11 grid points) to construct the posterior for *p* (the probability of water). Assume a flat prior.
+
+Plot the posterior distribution.
+
+```{r}
+
+```
+
+
+## Exercise 2: Thinking Deeper with Bayes' Theorem
+
+Suppose in the globe tossing scenario there are two globes, one for Earth and one for Mars. The Earth globe is 70% covered in water. The Mars globe is 100% land. Further suppose that one of these globes—you don’t know which—was tossed in the air and produced a “land” observation. Assume that each globe was equally likely to be tossed. Show that the posterior probability that the globe was the Earth, conditional on seeing “land” (Pr(Earth|land)), is 0.23.
+
+Note, this problem might seem like it has a lot of information to consider, but it is actually a direct application of Bayes' Theorem. If you're having problems getting started, write out Bayes' Theorem. Also, R is not strictly necessary for this problem. You could do the math by hand, so R is just a glorified calculator here.
+
+```{r}
+
+```
