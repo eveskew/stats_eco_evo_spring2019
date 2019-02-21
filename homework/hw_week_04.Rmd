@@ -1,0 +1,41 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 04 - Due 26 Feb 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_04_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.
+
+
+## Problem 1 (5 points)
+
+Imagine you're beginning studies in a new field system, focusing on a bacterial pathogen (i.e., disease-causing organism) that infects small mammals. Your pilot sampling efforts find 9 infected animals out of 20 animals sampled. Based on this (admittedly small) sample, you'd like to estimate the probability of infection value (*p*) in the study population. To do so, use grid approximation with 11 grid points to construct the posterior for the probability of infection parameter. Assume a flat prior.
+
+Plot your posterior distribution. (Using base R will likely be easier here, since it won't require you to organize your grid and posterior vectors into a data frame.) Based on visual inspection of the plot, which values of the probability of infection parameter have the most posterior support?
+
+```{r}
+
+```
+
+
+## Problem 2 (2 points)
+
+Repeat the previous problem using grid approximation with 101 points. Assume a flat prior, and again plot the resulting posterior distribution.
+
+How has the posterior distribution changed as a result of increasing the number of points used in your grid approximation?
+
+```{r}
+
+```
+
+
+## Problem 3 (3 points)
+
+Thus far you have been assuming a flat prior for the probability of infection parameter in your computations (i.e., equal prior probability across all potential parameter values). Do you think this is a realistic assumption? What, if anything, do you know about the probability of infection parameter that would allow you to formulate a sensible prior? Where might you gather information with which to inform your choice of prior?
