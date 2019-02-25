@@ -1,0 +1,67 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 05 - 25 and 27 February 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+# Statistical Distributions and Summary Statistics
+
+
+## Exercise 1: Grid Approximation, Our Old Friend
+
+Imagine the globe tossing example from the *Statistical Rethinking* text and class resulted in 8 water observations out of 15 globe tosses.
+
+With this set of observations, use grid approximation (with 101 grid points) to construct the posterior for *p* (the probability of water). Assume a flat prior.
+
+Plot the posterior distribution.
+
+```{r}
+
+```
+
+
+## Exercise 2: Sampling From a Grid-Approximate Posterior
+
+Draw 10,000 samples from the posterior distribution of *p*. Call these samples `post.samples`. Visualize `post.samples` using the `dens()` function. Re-run your sampling and plotting code multiple times to observe the effects of sampling variation.
+
+```{r}
+
+```
+
+
+## Exercise 3: Summarizing Samples
+
+Return the mean, median, and mode (using `chainmode()`) of `post.samples`. Then calculate the 80%, 90%, and 99% highest posterior density intervals.
+
+```{r}
+
+```
+
+
+## Exercise 4: Implied Model Predictions
+
+Using `post.samples`, generate 10,000 simulated model predictions for a binomial trial of size 15 (you can call these `preds`). Visualize the model predictions using the `simplehist()` function. 
+
+Based on these posterior predictions, what is the probability of observing 8 waters in 15 globe tosses?
+
+```{r}
+
+```
+
+
+## Exercise 5: More Implied Model Predictions
+
+Using the *same* posterior samples (i.e., `post.samples`), calculate the posterior probability of observing 8 waters in 9 tosses.
+
+```{r}
+
+```
