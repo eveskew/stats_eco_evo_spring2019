@@ -1,0 +1,71 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 06 - 04 and 06 March 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Gaussian Regression Models
+
+This week we'll be working with simulated data that's based on a real ecological research scenario. Tree age (in years) can be evaluated using tree core data, while tree height (in centimeters) can be remotely sensed using LIDAR technology. Given some initial data relating tree age and tree height, a researcher interested in tree population demography might reasonably want to estimate tree age based on tree height, avoiding the time, expense, and labor associated with the field work needed to collect tree core data.
+
+
+## Exercise 1: Fitting a Gaussian Model of Tree Age
+
+First, import the `simulated_trees.csv` dataset into R. This data contains tree height and age variables. Visualize the tree age variable using a plot type of your choice.
+
+Now, construct a model of tree age using a Gaussian distribution, and use `map()` to fit the model. Assume priors of `dnorm(0, 50)` for the mean parameter and `dcauchy(0, 5)` for the standard deviation parameter. Visualize these priors before you fit your model. To ensure a good model fit, you may need to explicitly define your starting values: 0 for the mean parameter and 50 for the standard deviation parameter.
+
+After fitting the model, use `precis()` to display the 99% PIs for all model parameters. How do you interpret the fit model parameters?
+
+```{r}
+
+```
+
+
+## Exercise 2: Fitting a Linear Regression of Tree Age
+
+Now, use tree `height` as a predictor of tree `age` in a linear regression model. Assume priors of `dnorm(0, 50)` for the intercept parameter, `dnorm(0, 50)` for the slope parameter, and `dcauchy(0, 5)` for the standard deviation parameter. To ensure a good model fit, you may need to explicitly define your starting values: 0 for the intercept and slope parameters and 50 for the standard deviation parameter. Again, use `map()` to fit the model.
+
+After fitting the model, use `precis()` to summarize the 99% PIs for all model parameters. What does the estimated value of the slope parameter suggest about the relationship between tree height and tree age? What does the intercept parameter correspond to in this model?
+
+```{r}
+
+```
+
+
+## Exercise 3: Plotting Raw Data and the *Maximum a Posterior* Trend Line
+
+Using either base R or `ggplot()`, plot tree age versus tree height, and add the *maximum a posterior* line for the estimated mean age at each tree height value. In other words, this line is the relationship between tree height and mean age implied by the *maximum a posterior* intercept and slope estimates from your fit model.
+
+```{r}
+
+```
+
+
+## Exercise 4: Making Age Predictions
+
+Generate 10,000 posterior samples from your fit model with `extract.samples()`. Using these samples, make 10,000 age predictions for a tree with a height of 1,200 centimeters. What is the mean value of these age predictions? What is the 50% HPDI of these age predictions? Plot the density of these age predictions.
+
+```{r}
+
+```
+
+
+## Bonus Exercise: Visualizing Uncertainty in the Posterior
+
+Recreate the plot from Exercise 3, but instead of overlaying the *maximum a posterior* trend line, overlay the trend lines implied by the first 100 posterior samples.
+
+```{r}
+
+```
