@@ -24,7 +24,7 @@ This week we'll be working with simulated data that's based on a real ecological
 
 First, import the `simulated_trees.csv` dataset into R. This data contains tree height and age variables. Visualize the tree age variable using a plot type of your choice.
 
-Now, construct a model of tree age using a Gaussian distribution, and use `map()` to fit the model. Assume priors of `dnorm(0, 50)` for the mean parameter and `dcauchy(0, 5)` for the standard deviation parameter. Visualize these priors before you fit your model. To ensure a good model fit, you may need to explicitly define your starting values: 0 for the mean parameter and 50 for the standard deviation parameter.
+Now, construct a model of tree age using a Gaussian distribution, and use `map()` to fit the model. Assume priors of `dnorm(0, 50)` for the mean parameter and `dcauchy(0, 5)` for the standard deviation parameter. Visualize these priors before you fit your model. To ensure a good model fit, you will likely need to explicitly define your starting values: 0 for the mean parameter and 50 for the standard deviation parameter.
 
 After fitting the model, use `precis()` to display the 99% PIs for all model parameters. How do you interpret the fit model parameters?
 
@@ -35,7 +35,7 @@ After fitting the model, use `precis()` to display the 99% PIs for all model par
 
 ## Exercise 2: Fitting a Linear Regression of Tree Age
 
-Now, use tree `height` as a predictor of tree `age` in a linear regression model. Assume priors of `dnorm(0, 50)` for the intercept parameter, `dnorm(0, 50)` for the slope parameter, and `dcauchy(0, 5)` for the standard deviation parameter. To ensure a good model fit, you may need to explicitly define your starting values: 0 for the intercept and slope parameters and 50 for the standard deviation parameter. Again, use `map()` to fit the model.
+Now, use tree `height` as a predictor of tree `age` in a linear regression model. Assume priors of `dnorm(0, 50)` for the intercept parameter, `dnorm(0, 50)` for the slope parameter, and `dcauchy(0, 5)` for the standard deviation parameter. To ensure a good model fit, you will likely need to explicitly define your starting values: 0 for the intercept and slope parameters and 50 for the standard deviation parameter. Again, use `map()` to fit the model.
 
 After fitting the model, use `precis()` to summarize the 99% PIs for all model parameters. What does the estimated value of the slope parameter suggest about the relationship between tree height and tree age? What does the intercept parameter correspond to in this model?
 
