@@ -1,0 +1,61 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 06 - Due 12 Mar 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_06_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.
+
+
+## Problem 1 (4 points)
+
+In lab this week you used the `simulated_trees.csv` dataset to specify a linear regression model with tree age (years) as the outcome variable and tree height (centimeters) as the predictor variable. Using the same dataset, do the following:
+
+- create a centered tree height variable
+
+- plot tree age (y-axis) vs. the centered tree height variable (x-axis)
+
+- fit a linear regression model for tree age using centered tree height as the predictor variable
+
+Assume a prior of `dnorm(0, 50)` for both the intercept and slope parameters and a prior of `dcauchy(0, 5)` for the standard deviation parameter. Also note, you'll need to use start values as follows to ensure a good model fit: intercept parameter = 50, slope parameter = 0, standard deviation parameter = 50. 
+
+Summarize your fit model parameters using 99% PIs. How do the parameter posteriors in this model compare to the linear regression you fit during lab? How do you interpret the intercept parameter in this model?
+
+```{r}
+
+```
+
+
+## Problem 2 (4 points)
+
+Now:
+
+- create a standardized tree height variable
+
+- plot tree age (y-axis) vs. the standardized tree height variable (x-axis)
+
+- fit a linear regression model for tree age using standardized tree height as the predictor variable (use the same priors and start values as in Problem 1)
+
+Summarize your fit model parameters using 99% PIs. How do the parameter posteriors in this model compare to the linear regression fit with the centered tree height variable? How do you interpret the slope parameter in this model?
+
+```{r}
+
+```
+
+
+## Problem 3 (2 points)
+
+Using the model you fit in Problem 2, generate 10,000 tree age predictions for a tree of average height (i.e., the average in the `simulated_trees` dataset). Report the mean and 50% HPDI of these predictions, and visualize the predictions using a density plot.
+
+```{r}
+
+```
