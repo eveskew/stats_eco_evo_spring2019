@@ -25,7 +25,7 @@ curve(dunif(x, 0, 1), from = -5, to = 5)
 m5.5 <- map(
   alist(
     kcal.per.g ~ dnorm(mu, sigma), # likelihood
-    mu <- a + bn*neocortex.perc ,
+    mu <- a + bn*neocortex.perc,
     a ~ dnorm(0, 100), # prior for the intercept
     bn ~ dnorm(0, 1), # prior for the np effect
     sigma ~ dunif(0, 1) # prior for the standard deviation
@@ -323,4 +323,4 @@ post <- extract.samples(m5.15, n = 10000)
 dens(post$a, xlim = c(120, 160))
 
 # To visualize the expected mean height value for males
-dens(post$a + post$b, col = "darkred", add = TRUE)
+dens(post$a + post$bm, col = "darkred", add = TRUE)
