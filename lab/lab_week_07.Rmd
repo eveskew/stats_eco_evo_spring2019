@@ -1,0 +1,66 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 07 - 11 and 13 March 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+# Multiple Regression Models
+
+For this week's lab, we'll be using data on foxes occupying urban England. You can access this data once you've loaded the `rethinking` package with the code `data(foxes)`. You can get a brief summary of all the variables contained in the dataset using `?foxes` or a data frame summary function of your choice.
+
+Note, for all models you'll be asked to construct here, assume a prior of `dnorm(0, 10)` for all intercept and slope parameters and a prior of `dunif(0, 10)` for all standard deviation parameters. Furthermore, start values of 0 for all intercept and slope parameters and 5 for all standard deviation parameters should ensure good model fits throughout these exercises.
+
+
+## Exercise 1: Linear Regression with Territory Size as a Predictor
+
+Construct a linear regression model of fox body weight (`weight` variable) using territory size (`area` variable) as a predictor.
+
+After fitting the model, use `precis()` to display the 90% PIs for all model parameters. Plot the results of this regression model, displaying the MAP regression line and the 95% interval of the mean.
+
+What does this model suggest about the effect of territory size on fox body weight?
+
+```{r}
+
+```
+
+
+## Exercise 2: Linear Regression with Group Size as a Predictor
+
+Now, construct a linear regression model of fox body weight using fox group size (`groupsize` variable) as a predictor.
+
+After fitting the model, use `precis()` to display the 90% PIs for all model parameters. Plot the results of this regression model, displaying the MAP regression line and the 95% interval of the mean.
+
+What does this model suggest about the effect of group size on fox body weight?
+
+```{r}
+
+```
+
+
+## Exercise 3: Multiple Regression with Both Predictors
+
+Now fit a multiple linear regression with fox body weight as the outcome and both territory size and group size as predictor variables.
+
+What does this model say about the importance of each predictor variable? Why do you get different results than you got in the exercises just above?
+
+```{r}
+
+```
+
+
+## Exercise 4: Counterfactual Plots for a Multiple Regression
+
+For the multiple regression model, plot predictions by showing the 95% interval of the mean for each predictor, holding the other predictor constant at its mean value.
+
+```{r}
+
+```
