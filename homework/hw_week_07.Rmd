@@ -1,0 +1,63 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 07 - Due 02 Apr 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+library(dplyr)
+library(ggplot2)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_07_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.  
+
+
+All of the following homework problems will use a dataset called `simulated_falcons.csv` which contains wingspan measures (in centimeters) for male and female falcons. For problems that ask you to create statistical models, use priors of `dnorm(0, 100)` for all intercept and coefficient parameters and a prior of `dcauchy(0, 10)` for all standard deviation parameters. Use explicit start values of 0 for all model parameters to ensure a good model fit. In addition, **you will have to use** `method = "SANN"` as an additional argument to `map()` to ensure all these models fit correctly. By default, `map()` uses `method = "BFGS"`, so we have to specify we want to use a different `method`. This bit of code will just be an extra part of your `map()` call in addition to your model code, `data`, and `start` arguments. Look at `?map` if you're unclear on the necessary code syntax.
+
+
+## Problem 1 (2 points)
+
+Import the `simulated_falcons` dataset, and create a jitter plot with the `sex` variable ("female" or "male") on the x-axis and the `wingspan` variable on the y-axis. This should give you a good idea as to the variation in falcon wingspan both between and within sexes.
+
+```{r}
+
+```
+
+
+## Problem 2 (2 points)
+
+Now fit a Gaussian model with wingspan as the outcome variable, and report the 99% PIs for the model parameters using `precis()`.
+
+Based on these parameter estimates and what you visualized in Problem 1, do you think this model provides a good description of the data? Why or why not?
+
+```{r}
+
+```
+
+
+## Problem 3 (3 points)
+
+Now fit a linear regression model with sex as a predictor of falcon wingspan. Note, since this variable is currently represented as a factor in the `simulated_falcons` dataset, you'll have to create a dummy variable for sex to use within your model. You can generate the dummy variable as you wish, coding either "male" or "female" with a value of 1.
+
+Report the 99% PIs for the parameter estimates from this model. Based on these results, do you think this model provides a better description of the data? Why or why not?
+
+```{r}
+
+```
+
+
+## Problem 4 (3 points)
+
+And now we come to a bit of a challenge. Can you fit a model that assumes falcon wingspan is a Gaussian outcome where both the mean wingspan AND the standard deviation in wingspan differs by sex? If you're able to fit the model for Problem 3, you have all of the conceptual tools needed to tackle this problem too. Think about how we go about modeling the Gaussian mean parameter in a typical linear regression model and apply those same strategies to modeling the standard deviation parameter...
+
+Summarize the fit model parameters using 99% PIs. What do the parameter estimates indicate about the standard deviation in wingspan of male versus female falcons? Would you interpret this as a strong or weak effect?
+
+```{r}
+
+```
