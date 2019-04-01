@@ -1,0 +1,42 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 10 - 01 and 03 April 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+# Interactions
+
+
+## Exercise 1: Multiple Regression with an Interaction
+
+Referencing the *Statistical Rethinking* text (see page 230 and relevant preceding code), reconstruct and fit the model `m7.9`. More specifically, this model uses the `tulips` dataset. It models `blooms` as the outcome variable of interest, with centered versions of `water` and `shade`, as well as the interaction between them, as continuous predictor variables.
+
+After fitting the model, use `precis()` to display the 97% PIs for all model parameters. Double check to make sure your results generally align with what's shown in the book.
+
+Finally, how do you interpret the intercept estimate in the context of this model?
+
+```{r}
+
+```
+
+
+## Exercise 2: Triptych Plots for Both Predictor Variables
+
+In the *Statistical Rethinking* book, Figure 7.7 (page 234), you'll see a series of "triptych" plots. Pay particular attention to the bottom row of the panel, which shows model-based predictions (from model m7.9) for the effect of `shade.c` on `blooms`. Because the model includes multiple predictor variables, it makes sense to plot this relationship across multiple values of the other predictor (`water.c`, hence the series of three plots in the bottom row), and because the model includes an interaction effect, the specific relationship between `shade.c` and `blooms` varies across the triptych plots.
+
+To fully visualize the predictions from model m7.9, create two triptych plots. The first triptych plot should show the effect of `water.c` on `blooms`, plotted for three different values of `shade.c`. The second triptych plot should show the effect of `shade.c` on `blooms`, plotted for three different values of `water.c` (i.e., this second triptych plot should replicate what you see in the bottom row of the book's Figure 7.7). Clearly, modifying the book's code will help you in generating this output. Feel free to visualize the 97% interval of the mean using lines (as in the book code) or using a shaded interval (as has been demonstrated in multiple places throughout the book and lecture code using the `shade()` function). Also note, you can plot these two triptych plots together neatly with some modification to your plotting window. See the book's R code 7.28 box for a hint as to how...
+
+Using the plots to help with your interpretation, at which value(s) of shade is the effect of water most extreme? At which value(s) of water is the effect of shade most extreme?
+ 
+```{r}
+
+```
