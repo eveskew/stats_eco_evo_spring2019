@@ -49,3 +49,47 @@ The overall goal of the project prospectus is simply to ensure that you have a p
 - For all students, **research project final drafts will be due on Thursday, May 02**, with an identical format to the project rough drafts outlined above. 
 
 - All project submissions should be uploaded to CourseWorks by 11:59 pm on the date indicated.
+
+
+\newpage
+## Research Project Grading Rubric
+
+**1) Background and Objectives/Hypotheses (10 points)**
+
+- provides a brief (1-2 paragraph) summary of the context for the analyses using relevant literature
+- clearly states the objectives/hypotheses for the analyses
+
+**2) Methods (25 points)**
+
+- describes data collection and processing procedures
+- describes the statistical techniques and/or software used for the analyses
+- methods are described at a level of detail such that a scientifically-savvy reader could replicate the analyses
+
+**3) Results (25 points)**
+
+- accurately and comprehensively describes the results of all analyses outlined in the methods section
+- where relevant, results not only describe point estimates for statistical measures of interest but also communicate uncertainty 
+
+**4) Data Presentation, Figures, Tables (10 points)**
+
+- where relevant, data that are described in text are also presented visually, whether by figures or tables
+- figures and/or tables are captioned, appropriately labeled (i.e., column headings, axis labels, etc.), and feature readable font sizes
+
+**5) Discussion (10 points)**
+
+- provides a brief (1-2 paragraph) summary and interpretation of the statistical results that speak to the motivating study objectives/hypotheses
+
+**6) Literature Cited (5 points)**
+
+- all primary literature and software referenced in the main text appear in the bibliography using a consistent citation style (use the *Ecology* journal style as described [here](https://www.csuci.edu/wmc/pdf/wmc-guide-ecologystyle021317.pdf) if you don't have another preferred style)
+
+**7) Overall Writing Style (5 points)**
+
+- writing is free from grammatical errors
+- writing demonstrates clear thinking with smooth transitions between ideas
+
+**8) Supplemental Code (10 points)**
+
+- code is styled to be neat and readable
+- code is commented to outline at least the major steps in the analysis
+- code is complete such that it enables reproducibility
