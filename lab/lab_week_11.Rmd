@@ -1,0 +1,56 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 11 - 08 and 10 April 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Link Functions and Poisson Regression
+
+
+## Exercise 1: Importing and Visualizing the Kline Dataset
+
+Import the Kline dataset that was shown in the *Statistical Rethinking* text and lecture. Add a log population size variable (`log_pop`) to the data frame for use as a predictor variable. Now, visualize the relationship between `log_pop` and `total_tools` using a scatter plot in `ggplot()`. Make the x-axis limits of your plot span from 0 to 15 and the y-axis limits of your plot span from 0 to 80. In addition, add the layer `geom_smooth(method = "lm", se = FALSE, fullrange = TRUE)` to your plot in order to display a linear trend line on top of the raw data.
+
+```{r}
+
+```
+
+
+## Exercise 2: Fitting a Poisson GLM and a Standard Linear Model
+
+First, fit a Poisson GLM to the Kline data (with `map()`), using `log_pop` as a predictor of total tool count. This model should replicate m10.12 from the *Statistical Rethinking* book, so reference the text if needed. After fitting the model, use `precis()` to display the 97% PIs for all model parameters.
+
+Now, fit a standard linear model (with a Gaussian outcome distribution) to the Kline data, again using `log_pop` as a predictor of total tool count. You'll likely encounter trouble getting the model to fit unless you use the following priors (or something very similar to them): intercept parameter with a prior of `dnorm(-50, 10)`, the beta coefficient for `log_pop` with a prior of   `dnorm(0, 10)`, and the standard deviation parameter with a prior of `dunif(0, 10)`. Again, use `precis()` to display the 97% PIs for all model parameters after you've fit the model.
+
+```{r}
+
+```
+ 
+ 
+## Exercise 3: Comparing Model-based Predictions
+
+Imagine we discover a new Oceanic island with a population of 150 people (log population size of 5.01). Using `sim()`, generate predictions for total tool count on this island for both the Poisson GLM and the standard linear model. Report the mean value of the predictions generated from both models. Which model suggests a higher total tool count for this hypothetical island?
+
+```{r}
+
+```
+
+
+## Exercise 4: Visualizing Predictions
+
+Visualize the total tool count predictions from both models using a method of your choice. Using your visualization and the previous exercises as a guide, do you think both of these models generate sensible predictions for total tool count for a hypothetical island with a log population size of 5.01? Why or why not? 
+
+```{r}
+
+```
