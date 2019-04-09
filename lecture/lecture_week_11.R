@@ -55,7 +55,7 @@ m8.1stan <- map2stan(
     bAR ~ dnorm(0, 10),
     sigma ~ dcauchy(0, 2)
   ),
-  data = dd)
+  data = dd.trim)
 
 # Compare model fits using precis()
 precis(m8.1stan, prob = 0.97)
@@ -75,7 +75,7 @@ plot(m8.1stan)
 plot(m8.1stan, window = c(1000, 2000)) # modify x-axis
 # Using the rstan plotting method
 rstan::traceplot(m8.1stan@stanfit, 
-                 pars = c("a", "bR", "bA", "bAR"))
+                 pars = c("a", "bR", "bA", "bAR", "sigma"))
 
 #==========================================================
 
