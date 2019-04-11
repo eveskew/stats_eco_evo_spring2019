@@ -1,0 +1,54 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 11 - Due 16 Apr 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_11_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.  
+  
+  
+After loading the `rethinking` package, if you run `data(salamanders)` you'll find a dataset of salamander counts (the `SALAMAN` variable) recorded at 47 forest plots. Given a common exposure across forest plots (i.e., if data was collected at a regular interval for all plots), then this count data is ideal for modeling as a Poisson variable.
+
+
+## Problem 1 (4 points)
+
+Model the relationship between salamander count (`SALAMAN`) and percentage of vegetation cover on the forest floor (`PCTCOVER`) using a Poisson generalized linear model (GLM). Use priors of your choice. If you're having trouble getting a model that consistently fits without error messages, trying using explicit start values of 0 for all model parameters.
+
+Use `precis()` to report the 97% PI of fit model parameters. What does your model suggest about the effect of vegetation cover on salamander counts?
+
+```{r}
+
+```
+
+
+## Problem 2 (3 points)
+
+Refit the same model as in Problem 1, this time using `map2stan()`, specifying four MCMC chains. Don't worry about the large amount of R console output that will turn up in your knit pdf document.
+
+After you've fit the model, report the 97% HPDIs of model parameters using `precis()`, and use a method of your choice (two were shown in lecture) to display parameter trace plots from the fit model.
+
+```{r}
+
+```
+
+
+## Problem 3 (3 points)
+
+Generate a plot showing the raw salamander count data (against vegetation cover) along with model-based predictions from the Poisson GLM you fit in Problem 1. More specifically, plot a line showing the mean predicted count and a shaded 97% HPDI interval for the predictions. 
+
+As a hint, use `sim()` to generate your predictions. Note that this will require counterfactual data, so your prediction generation process will start by defining a sequence of predictor values to generate predictions for. From there, everything should be very similar to examples you've encountered previously in class.
+
+Using your plot to help with interpretation, how does the model perform well and how does it perform poorly? 
+
+```{r}
+
+```
