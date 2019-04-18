@@ -1,0 +1,52 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 12 - Due 23 Apr 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_12_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.  
+  
+  
+This week's homework problems will ask you to think all the way back to your week 04 homework assignment. To briefly summarize, you were asked to imagine studying a bacterial pathogen that infects small mammals. Hypothetical pilot research efforts found 9 infected individuals out of 20 animals sampled in total.
+
+All the problems in this homework assignment will ask you to work with this data scenario. The primary challenge should not be the specification and fitting of the models; they'll each contain only one parameter, the intercept value. Rather, I'm mainly asking you to think about how to represent the data in different formats that are all valid expressions of binomial data. 
+
+
+## Problem 1 (3 points)
+
+First, represent the data scenario (9 infected animals out of 20 animals sampled) using an *aggregated binomial* data format. For this problem, your data should be contained in a data frame with only one row and two columns. One column should contain the number of infected individuals. The other column should contain the total number of samples.
+
+Use `map()` to fit a binomial generalized linear model to this data (an intercept-only model with no predictor variables). Explicitly specify a start value of -5 for your intercept parameter. After fitting, use `precis()` to report the 97% PI of the fit intercept parameter. Further, use posterior samples from the model and `dens()` to visualize the posterior distribution of the intercept parameter **and** its implied probability of success (i.e., probability of infection) values.
+
+```{r}
+
+```
+
+
+## Problem 2 (3 points)
+
+Now refit the same model, but this time construct your data such that each row represents a single binomial trial. In other words, this is disaggregated binomial data, leading to what was termed in lecture *logistic regression*. For this data format, you will need a data frame with only one column. Since each row will represent a single binomial trial, the `size` argument within your model's `dbinom()` call will simply be equal to 1. After fitting the model, report the 97% PI of the fit intercept parameter to confirm you get identical posterior inference to Problem 1.
+
+```{r}
+
+```
+
+
+## Problem 3 (4 points)
+
+Refit the same model again (using either data format), but this time use `map2stan()`, specifying four MCMC chains. In addition, use a `dunif()` prior for your model's intercept parameter that encodes the assumption that probability of success (i.e., probability of infection) values > 0.5 are impossible. Remember, since the binomial GLM uses a link function to relate the probability of success value (which must be between 0 and 1) to the fit model parameters, you'll have to think about what values your intercept parameter should be constrained to...
+
+After fitting the model, use `precis()` to report the 97% HPDI of the fit intercept parameter. Further, use posterior samples from the model and `dens()` to visualize the intercept parameter and its implied probability of success (i.e., probability of infection) values.
+
+```{r}
+
+```
