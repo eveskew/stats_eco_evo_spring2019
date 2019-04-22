@@ -5,6 +5,7 @@
 *.DS_Store
 
 course_archive/*
+final_exam/*
 homework/*.pdf
 homework_keys/*
 lab/*.pdf

@@ -1,0 +1,53 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 13 - Due 30 Apr 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_13_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.  
+  
+  
+This week's homework problems will use the snow goose color morph dataset that was introduced at the end of last week's lecture. The following code will load this dataset into your R environment as a data frame called `geese`:
+
+```{r load_snow_goose_data}
+
+# Load in snow goose data in aggregated binomial format
+geese <- data.frame(
+  blue_geese = as.integer(c(215, 84, 7)),
+  total_geese = as.integer(c(500, 300, 25)),
+  study_site = as.integer(c(1, 2, 3))
+)
+```
+
+
+## Problem 1 (4 points)
+
+Use `map()` to fit a binomial generalized linear model, with `study_site` as a predictor variable and `blue_geese` as the outcome variable. Rather than constructing dummy variables to represent site affiliation, use the existing `study_site` variable as an index variable to create a vector of intercept parameters. This model should be analogous to the model that was demonstrated during the week 12 lecture. However, with this model formulation, you'll generate an intercept value that directly corresponds to each study site's log-odds of a goose belonging to the blue morph.
+
+After fitting the model, use `precis()` to report the 97% PIs of the fit model parameters. Use posterior samples from the model and `dens()` to visualize the implied probability of success (i.e., implied probability of a goose being blue) values for each of the three study sites.
+
+```{r}
+
+```
+
+
+## Problem 2 (6 points)
+
+Now, formulate and fit this same model as a multilevel binomial generalized linear model. Remember, you'll have to use `map2stan()` in order to successfully fit a multilevel model. Don't worry about any warning messages you may receive regarding divergent iterations during sampling.
+
+After fitting the model, visualize the MCMC chain(s) using a trace plot function, and use `precis()` to report the 97% HPDIs of the fit model parameters. Use posterior samples from the model and `dens()` to visualize the implied probability of success (i.e., implied probability of a goose being blue) values for each of the three study sites.
+
+What differences, if any, do you see between the posterior probability of success values for each site with this model compared to the model fit in Problem 1? Referencing your `precis()` output for both models (which show raw model estimates on the log-odds scale) may also help with interpretation.
+
+```{r}
+
+```
