@@ -1,0 +1,72 @@
+---
+title: "| EEEB UN3005/GR5005\n| Homework - Week 14 - Due 07 May 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+library(dplyr)
+```
+
+
+**Homework Instructions:** Complete this assignment by writing code in the code chunks provided. If required, provide written explanations below the relevant code chunks. Replace "USE YOUR NAME HERE" with your name in the document header. When complete, knit this document within RStudio to generate a pdf. Please review the resulting pdf to ensure that all content relevant for grading (i.e., code, code output, and written explanations) appears in the document. Rename your pdf document according to the following format: hw_week_14_firstname_lastname.pdf. Upload this final homework document to CourseWorks by 5 pm on the due date.  
+  
+  
+This week's homework problems will use a historical human ecology/demography dataset from 1988 on nearly 2,000 Bangladeshi women. Access this dataset, which includes information on the women's households and behavior, from the `rethinking` package using `data("bangladesh")`.
+
+
+## Problem 1 (1.5 points)
+
+Import the `bangladesh` data and **filter the data to only contain information on women from administrative districts 1 through 50 (the `district` variable).** Use this filtered dataset for all problems in this assignment. If you don't, you're sure to run into some modeling trouble.
+
+First, fit a binomial generalized linear model using `district` to predict a woman's decision to use contraception (the `use.contraception` variable). Note, treating `district` as an index variable to generate a vector of intercept parameters (one corresponding to each district) will be the most effective approach here.
+
+After fitting the model, use `precis()` to report the 97% PIs of the fit model parameters.
+
+```{r}
+
+```
+
+
+## Problem 2 (2.5 points)
+
+Now, formulate and fit this same model as a multilevel binomial generalized linear model. Don't worry about any warning messages you may receive regarding divergent iterations during sampling.
+
+After fitting the model, use `precis()` to report the 97% HPDIs of the fit model parameters. 
+
+Using posterior samples from the model, visualize the implied probability of contraception use for a woman occupying an *average* district.
+
+```{r}
+
+```
+
+
+## Problem 3 (4 points)
+
+On one plot, show the implied probability of contraception use values for each district from each of the two models you've fit so far. District ID should appear on the x-axis of this plot, while implied probability of contraception use values should appear on the y-axis. It will likely help to distinguish the estimates from each model using different colors. For this plot, you can ignore uncertainty in the posterior estimates for each district, and instead simply plot the mean value for each district. 
+
+Some hints may be useful here. First, you can use any plotting approach you'd like, but base R plotting techniques will avoid the extra step of having to package together estimates from the two different models into one data frame. Second, note that you can access the mean parameter estimates from a model using the `coef()` function like so: `coef(my_model)`. For a binomial model with a logit link, these estimates will of course appear on the log-odds scale, so keep that in mind. Finally, note that the `points()` function will allow you to add data points to an existing plot. So perhaps the easiest strategy here is to set up the plot with the estimates from one model (using a base R plot), then layer on top the estimates from the second model using `points()`.
+
+Using your visualization to help with interpretation, how do these two models, the binomial GLM and the binomial GLMM, disagree on the implied probability of contraception use among districts? In which districts is the disagreement most extreme? Can you explain why?
+
+```{r}
+
+```
+
+
+## Problem 4 (2 points)
+
+Adapt the model you constructed in Problem 2 to also consider the impact of whether or not a woman lives in an urban area as a predictor for contraception use. Note, `urban` is already a dummy variable, with a value of 1 indicating a woman who lives in a city and a value of 0 indicating a woman who lives in a rural area.
+
+After fitting the new model, use `precis()` to report the 97% HPDIs of the fit model parameters. 
+
+Interpret the urban living effect. Based on this dataset and model, are urban women more or less likely to use contraception?
+
+```{r}
+
+```

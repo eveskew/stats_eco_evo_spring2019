@@ -6,6 +6,7 @@
 
 course_archive/*
 final_exam/*
+grading/*
 homework/*.pdf
 homework_keys/*
 lab/*.pdf
