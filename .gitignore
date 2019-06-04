@@ -5,6 +5,7 @@
 *.DS_Store
 
 course_archive/*
+evaluations/*
 final_exam/*
 grading/*
 homework/*.pdf
